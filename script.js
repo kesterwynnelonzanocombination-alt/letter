@@ -8,6 +8,11 @@ I believe in you, and I know you can ace it! I'm always rooting for you.
 
 Good luck, my Fish! 🫶🏻✨`;
 
+const signature = `
+
+From:
+Di mo kilala. 😛 🤍`;
+
 let index = 0;
 let opened = false;
 
@@ -26,19 +31,39 @@ envelope.addEventListener("click", () => {
 
 });
 
+let sigIndex = 0;
+
 function typeWriter(){
 
     if(index < message.length){
 
         messageBox.innerHTML += message.charAt(index);
-
         index++;
+        setTimeout(typeWriter, 75);
 
-        setTimeout(typeWriter,75);
+    }else{
+
+        setTimeout(typeSignature, 800);
 
     }
 
 }
+
+function typeSignature(){
+
+    const signatureBox = document.getElementById("signature");
+
+    if(sigIndex < signature.length){
+
+        signatureBox.innerHTML += signature.charAt(sigIndex);
+        sigIndex++;
+
+        setTimeout(typeSignature, 75);
+
+    }
+
+}
+
 
 function createHeart(){
 
