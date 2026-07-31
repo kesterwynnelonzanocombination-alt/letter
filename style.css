@@ -14,27 +14,6 @@ body{
     align-items:center;
 }
 
-#loading{
-    position:fixed;
-    inset:0;
-    background:linear-gradient(135deg,#ff8fb1,#ffc8dd);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    font-size:30px;
-    animation:fadeOut 3s forwards;
-    z-index:1000;
-}
-
-@keyframes fadeOut{
-    0%,80%{opacity:1;}
-    100%{
-        opacity:0;
-        visibility:hidden;
-    }
-}
-
 .envelope{
     width:340px;
     height:230px;
@@ -47,7 +26,11 @@ body{
 }
 
 .envelope:hover{
-    transform:scale(1.03);
+
+transform:scale(1.03);
+
+box-shadow:0 0 35px rgba(255,255,255,.8);
+
 }
 
 .front{
@@ -65,7 +48,7 @@ body{
     left:5%;
     top:10px;
     width:90%;
-    height:420px;
+    height:460px;
     background:white;
     border-radius:15px;
     padding:20px;
@@ -79,11 +62,11 @@ body{
 }
 
 .open .letter{
-    transform:translateY(-300px);
+    transform:translateY(-270px);
 }
 
 .photo{
-    width:150px;
+    width:180px;
     display:block;
     margin:0 auto 15px;
     border-radius:50%;
@@ -182,6 +165,7 @@ h3{
     transform:translateY(0) scale(1);
 }
 #tapLetter{
+    display:none;
     text-align:center;
     color:#ff4d88;
     font-size:18px;
@@ -249,4 +233,7 @@ h3{
     0%{transform:scale(1);}
     50%{transform:scale(1.15);}
     100%{transform:scale(1);}
+}
+html{
+    scroll-behavior:smooth;
 }
