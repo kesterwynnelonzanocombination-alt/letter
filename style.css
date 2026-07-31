@@ -53,6 +53,8 @@ box-shadow:0 0 35px rgba(255,255,255,.8);
     border-radius:15px;
     padding:20px;
     overflow:auto;
+    opacity:0;
+    visibility:hidden;
     transition:1.2s;
     box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
@@ -62,6 +64,8 @@ box-shadow:0 0 35px rgba(255,255,255,.8);
 }
 
 .open .letter{
+    opacity:1;
+    visibility:visible;
     transform:translateY(-270px);
 }
 
