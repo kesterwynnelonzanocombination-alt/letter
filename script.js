@@ -40,10 +40,17 @@ intro.addEventListener("click", () => {
 
     setTimeout(() => {
 
-        intro.style.display = "none";
-        envelopePage.style.display = "flex";
+    photo.classList.add("show");
 
-    }, 1200);
+    setTimeout(() => {
+
+        document.getElementById("title").classList.add("show");
+
+        tapLetter.style.display = "block";
+
+    }, 900);
+
+}, 1200);
 
 });
 
