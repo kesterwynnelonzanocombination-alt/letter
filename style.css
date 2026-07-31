@@ -155,10 +155,23 @@ h3{
     100%{transform:scale(1);}
 }
 #photo{
+    width:180px;
+    display:block;
+    margin:0 auto 15px;
+    border-radius:50%;
+    border:5px solid #ff6f91;
+    box-shadow:0 0 20px pink;
+
     opacity:0;
-    transform:translateY(30px) scale(.85);
-    transition:1.5s ease;
+    transform:translateY(180px) scale(.7) rotate(-8deg);
+    transition:1.8s cubic-bezier(.22,.61,.36,1);
 }
+
+#photo.show{
+    opacity:1;
+    transform:translateY(0) scale(1) rotate(0deg);
+}
+
 
 #photo.show{
     opacity:1;
