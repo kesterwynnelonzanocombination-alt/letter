@@ -250,3 +250,15 @@ h3{
 html{
     scroll-behavior:smooth;
 }
+
+#title{
+    opacity:0;
+    transform:translateY(20px);
+    transition:1s;
+}
+
+#title.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
