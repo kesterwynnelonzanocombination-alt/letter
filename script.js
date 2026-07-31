@@ -6,10 +6,7 @@ Please remember that whatever the results may be, I'll always be proud of you! Y
 
 I believe in you, and I know you can ace it! I'm always rooting for you.
 
-Good luck, my Fish! 🫶🏻✨
-
-From:
-Di mo kilala. 😛 🤍`;
+Good luck, my Fish! 🫶🏻✨`;
 
 let index = 0;
 let opened = false;
