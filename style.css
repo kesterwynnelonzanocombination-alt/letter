@@ -118,6 +118,14 @@ h3{
     animation:blink 1.2s infinite;
 }
 
+#signature{
+    margin-top:25px;
+    text-align:right;
+    color:#ff3b6b;
+    white-space:pre-wrap;
+    font-size:18px;
+}
+
 @keyframes blink{
     50%{
         opacity:.4;
