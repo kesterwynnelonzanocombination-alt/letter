@@ -131,3 +131,122 @@ h3{
         opacity:.4;
     }
 }
+/* INTRO SCREEN */
+
+#intro{
+    position:fixed;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#ffb6c1,#ffd9e8);
+    color:white;
+    z-index:9999;
+    cursor:pointer;
+    transition:opacity .8s;
+    padding:20px;
+}
+
+#intro h1{
+    font-size:42px;
+    animation:pulse 2s infinite;
+}
+
+#intro p{
+    font-size:20px;
+    max-width:500px;
+    margin:20px 0;
+    line-height:1.6;
+}
+
+#intro span{
+    font-size:18px;
+    opacity:.9;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+    100%{transform:scale(1);}
+}
+#photo{
+    opacity:0;
+    transform:translateY(30px) scale(.85);
+    transition:1.5s ease;
+}
+
+#photo.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+#tapLetter{
+    text-align:center;
+    color:#ff4d88;
+    font-size:18px;
+    margin-top:20px;
+    animation:tapGlow 2s infinite;
+    cursor:pointer;
+}
+
+@keyframes tapGlow{
+    0%{opacity:.6;}
+    50%{opacity:1;}
+    100%{opacity:.6;}
+}
+#signature{
+    margin-top:25px;
+    text-align:right;
+    white-space:pre-wrap;
+    color:#ff3b6b;
+    font-size:18px;
+}
+.heartTransition{
+    position:fixed;
+    font-size:24px;
+    pointer-events:none;
+    animation:riseHearts 1.2s linear forwards;
+}
+
+@keyframes riseHearts{
+    0%{
+        opacity:1;
+        transform:translateY(0) scale(.5);
+    }
+
+    100%{
+        opacity:0;
+        transform:translateY(-250px) scale(1.5);
+    }
+}
+#endingHeart{
+    opacity:0;
+    font-size:45px;
+    text-align:center;
+    margin-top:20px;
+    animation:beat 1s infinite;
+    transition:2s;
+}
+
+#endingHeart.show{
+    opacity:1;
+}
+
+#endingText{
+    opacity:0;
+    text-align:center;
+    margin-top:10px;
+    color:#ff3b6b;
+    transition:2s;
+}
+
+#endingText.show{
+    opacity:1;
+}
+
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+    100%{transform:scale(1);}
+}
