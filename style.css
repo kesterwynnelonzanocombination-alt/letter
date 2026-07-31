@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Georgia, serif;
+    background:linear-gradient(135deg,#ff9eb5,#ffcce0,#ffeef5);
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#loading{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#ff8fb1,#ffc8dd);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:30px;
+    animation:fadeOut 3s forwards;
+    z-index:1000;
+}
+
+@keyframes fadeOut{
+    0%,80%{opacity:1;}
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+.envelope{
+    width:340px;
+    height:230px;
+    background:#ff6f91;
+    position:relative;
+    border-radius:0 0 12px 12px;
+    cursor:pointer;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+    transition:.5s;
+}
+
+.envelope:hover{
+    transform:scale(1.03);
+}
+
+.front{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#ff8fab;
+    clip-path:polygon(0 0,100% 0,50% 60%);
+    transform-origin:top;
+    transition:1s;
+}
+
+.letter{
+    position:absolute;
+    left:5%;
+    top:10px;
+    width:90%;
+    height:420px;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    overflow:auto;
+    transition:1.2s;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.open .front{
+    transform:rotateX(180deg);
+}
+
+.open .letter{
+    transform:translateY(-300px);
+}
+
+.photo{
+    width:150px;
+    display:block;
+    margin:0 auto 15px;
+    border-radius:50%;
+    border:5px solid #ff6f91;
+    box-shadow:0 0 20px pink;
+}
+
+h2{
+    text-align:center;
+    color:#ff3b6b;
+    margin-bottom:15px;
+}
+
+#message{
+    white-space:pre-wrap;
+    line-height:1.8;
+    color:#444;
+    font-size:17px;
+}
+
+h3{
+    text-align:right;
+    margin-top:20px;
+    color:#ff3b6b;
+}
+
+.clickText{
+    margin-top:20px;
+    text-align:center;
+    color:white;
+    font-size:20px;
+    animation:blink 1.2s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:.4;
+    }
+}
