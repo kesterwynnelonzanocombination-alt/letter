@@ -25,6 +25,7 @@ const photo = document.getElementById("photo");
 const tapLetter = document.getElementById("tapLetter");
 const messageBox = document.getElementById("message");
 const signatureBox = document.getElementById("signature");
+const letter = document.getElementById("letter");
 const endingHeart = document.getElementById("endingHeart");
 const endingText = document.getElementById("endingText");
 
@@ -96,6 +97,8 @@ function typeWriter(){
 
         messageBox.innerHTML += message.charAt(index);
 
+        letter.scrollTop = letter.scrollHeight;
+
         index++;
 
         setTimeout(typeWriter,75);
@@ -115,6 +118,8 @@ function typeSignature(){
     if(sigIndex < signature.length){
 
         signatureBox.innerHTML += signature.charAt(sigIndex);
+
+        letter.scrollTop = letter.scrollHeight;
 
         sigIndex++;
 
