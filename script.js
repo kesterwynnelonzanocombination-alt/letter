@@ -34,7 +34,7 @@ function typeWriter(){
 
         index++;
 
-        setTimeout(typeWriter,35);
+        setTimeout(typeWriter,75);
 
     }
 
