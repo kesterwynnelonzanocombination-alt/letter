@@ -40,17 +40,11 @@ intro.addEventListener("click", () => {
 
     setTimeout(() => {
 
-    photo.classList.add("show");
+        intro.style.display = "none";
 
-    setTimeout(() => {
+        envelopePage.style.display = "flex";
 
-        document.getElementById("title").classList.add("show");
-
-        tapLetter.style.display = "block";
-
-    }, 900);
-
-}, 1200);
+    },1200);
 
 });
 
@@ -66,10 +60,17 @@ envelope.addEventListener("click", () => {
 
     setTimeout(() => {
 
-        photo.classList.add("show");
+    photo.classList.add("show");
+
+    setTimeout(() => {
+
+        document.getElementById("title").classList.add("show");
+
         tapLetter.style.display = "block";
 
-    }, 1200);
+    },800);
+
+},1200);
 
 });
 
